@@ -19,7 +19,8 @@
   border: 5px solid black;
   border-radius: 95px;
   padding: 20px;
-  font-family: 'Sofia' sans-serif
+  font-family: 'Sofia' sans-serif;
+  
 }
 
 .name {
@@ -32,7 +33,7 @@
   border: 3px dashed black;
   border-radius: 50px;
   padding: 70px;
-  margin: 100px;
+  margin-top: 6rem;
   fill: cross-;
 }
 
@@ -42,7 +43,7 @@
   background-color: #d0bfff;
   border: 5px solid black;
   border-radius: 50px;
-
+  margin-top: -6rem;;
 }
 
 .play a {
@@ -85,4 +86,45 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.Board{
+  width: 700px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr) ;
+  grid-template-rows: repeat(3, 1fr) ;
+  gap:10px;
+  background-color: #d0bfff;
+  text-align: center;
+  justify-content: space-around;
+  font-size: xx-large;
+  align-items: center;
+  border: 5px solid black;
+  border-radius: 95px;
+  padding: 20px;;
+  text-align: center;
+  font-size: xx-large;
+  margin: 25px;
+  margin-top: -6rem;
+}
+
+.cell {
+  margin:0px;
+  border-width: 5px ;
+  padding: 70px;
+  color: black;
+  /* padding-top: 60px; */
+  /* margin: 10px; */
+  background-color: white;
+  border-radius: 50px;
+  font-size: xx-large;
+  font-weight:bolder;
+  font-family: 'lilita one';
+  opacity: 1;
+  stroke-width: 100%;
+}
+
+.win-results {
+  margin-top: -25rem;
 }

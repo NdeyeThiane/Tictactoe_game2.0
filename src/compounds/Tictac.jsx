@@ -1,11 +1,11 @@
-import React from "react";
+// import React from "react";
 
-function Cells (props) {
+// function Cells (props) {
     
 
-    return <div className="cell" id={props.id} onClick={props.onClick}>{props.children}</div>
-}
+//     return <div className="cell" id={props.id} onClick={props.onClick}>{props.children}</div>
+// }
 
 
-export default Cells;
+// export default Cells;
 
