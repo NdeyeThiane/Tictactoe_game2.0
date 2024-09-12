@@ -1,22 +1,24 @@
-import { useState} from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import '/Users/tpl822_6/project-techtonica/tictactoe_game2.0/src/App.css'
-import "/Users/tpl822_6/project-techtonica/tictactoe_game2.0/src/compounds/Tictac.css"
-import Board from './compounds/Board'
-// import { Home } from './pages/Home'
-import {Play, Name}  from './Playbutton'
+import React, { useState} from 'react'
+import Board from './new_components/Board'
+import StartMenu from './new_components/StartMenu';
+import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+//state management for start menu and board
+const [playMode, setPlayMode] = useState('start-menu');
+//set and change mode handlers
+const changeMode = (newMode) => setPlayMode(newMode)
+const onReturnClick = () => changeMode('start-menu')
 
   return (
     
-    // <Board />
+  
     
       <div className="App">
-        <Name />
-        <Play />
+        {playMode === 'start-menu' && <StartMenu onStart={() => changeMode('board')}/>}
+        {playMode === 'board' && <Board onReturnClick={onReturnClick}/>}
       </div>
       
    
